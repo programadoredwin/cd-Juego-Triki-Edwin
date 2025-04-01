@@ -1,0 +1,70 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    background: linear-gradient(to bottom, #1e3c72, #2a5298);
+    color: #fff;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2rem; /* Tamaño ligeramente reducido */
+    margin-bottom: 10px;
+}
+
+#info {
+    font-size: 0.9rem; /* Ajuste del texto informativo */
+    margin: 10px 0;
+}
+
+#board {
+    display: grid;
+    gap: 8px; /* Espacio más ajustado entre celdas */
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    width: 80vw; /* Reducción del ancho máximo del tablero */
+    max-width: 400px; /* Tamaño máximo reducido para pantallas grandes */
+    height: auto;
+    aspect-ratio: 1; /* Tablero perfectamente cuadrado */
+}
+
+.cell {
+    background-color: #34495e;
+    border: 2px solid #ecf0f1;
+    font-size: calc(0.8rem + 0.3vw); /* Tamaño de texto más pequeño */
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    aspect-ratio: 1; /* Garantiza celdas perfectamente cuadradas */
+    transition: background-color 0.3s ease;
+}
+
+    .cell:hover {
+        background-color: #2ecc71;
+    }
+
+    .cell.taken {
+        pointer-events: none;
+    }
+
+.hidden {
+    display: none;
+}
+
+button {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 8px 16px; /* Tamaño más pequeño del botón */
+    font-size: 0.9rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    button:hover {
+        background-color: #c0392b;
+    }
